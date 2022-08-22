@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--Cream);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* transition: ease all 1s; */
+}
+.card {
+    max-height: max-content;
+    width: max-content;
+    display: flex;
+    border-radius: 13px;
+    overflow: hidden;
+    /* border:1px red solid; */
+    background-color: white;
+    
+}
+.card-l {
+    width: 330px;
+    margin-right: 1rem;
+    /* border:1px red solid; */
+}
+.card-l img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-r{
+    padding: 2rem;
+    display: flex;
+    flex-direction:column;
+    position: relative;
+}
+
+.card-r .paragraph{
+    font-size: 14px;
+    margin: 1.5rem 0;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.card-r .price h1{
+    font-size: 28px;
+    padding-right: 1rem;
+    color: var(--Dark-cyan);
+}
+.card-r .Fraunces{
+    font-family: 'Fraunces', serif;
+}
+.price{
+    display:flex;
+    align-items:center;
+}
+.foot{
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius:10px;
+    background-color: var(--Dark-cyan);
+}
+.foot a{
+    color: white;
+    text-decoration-line: none;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.foot img{
+    margin-right: 0.5rem;
+}
+
+@media only screen and (max-width:375px){
+    .card{
+        flex-direction:column;
+    }
+    .card-l{
+        height:15rem;
+        width: 100%;
+        margin:0;
+    }
+    .card-l img{
+        object-fit:fill;
+        content:url("images/image-product-mobile.jpg");
+    }
+}
